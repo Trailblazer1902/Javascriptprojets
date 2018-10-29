@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+
+	<style type="text/css">
+		body {
+			font-family: lato;
+			background: url(light-bulb-1246043__340.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			animation-name: decide;
+			animation-duration: 15s;
+			animation-iteration-count: infinite;
+			color: white;
+			
+		}
+
+		
+
+		.container {
+			margin: 10%;
+			height: 500px;
+			width: 1000px;
+			border: 1px solid grey;
+			border-radius:  0px 0px 900px 900px; 
+			background-color: rgba(235,237,239, 0.3);
+		}
+		.table {
+			text-align: center;
+			margin: 50px;
+			text-align: center;
+			color: white;
+			/*opacity: 1;*/
+		}
+
+		input {
+			text-align: center;
+		}
+	</style>
+
+	<script type="text/javascript">
+		// function countDownTime()
+		// {
+		// 	var x = secs.value 
+		// 	interval = setInterval(function() {
+		// 		x--;
+		// 		secs.value=x;
+
+		// 		if (x === 0) {
+		// 			clearInterval(interval);
+		// 			alert ('Time up!');
+		// 		}
+
+		// 	}, 1000);
+		// }
+
+		// function countTheTimeDown() {
+		// 	var x = secs.value
+
+		// 	if {
+		// 		x <= 60 
+		// 		interval = setInterval() {
+
+		// 		} 
+		// 	}
+
+		function countDownTime() 
+		{
+			var a = hr.value;
+			var b = min.value;
+			var c = secs.value;
+			var d = "Time Out!!!";
+				
+
+					 if (hr.value>0 && min.value == 0){
+					 	hr.value--;
+					 	min.value=60;
+					 }
+
+					 if (min.value>0 && secs.value == 0){
+					 	min.value--;
+					 	secs.value=60;
+					 }
+				
+				if (secs.value > 0 && secs.value <= 60) 
+				{	
+					secs.value--;
+					setTimeout(countDownTime,1000);
+
+				}
+
+					if (secs.value <= 9 && secs.value > 0) {
+						secs.value = "0" + secs.value;
+					}
+
+				 if ( a, b, c  < 0) {
+
+						alert ("Erroneous!")
+					}
+
+
+
+
+		 }
+
+		
+						
+	</script>
+</head>
+<body>
+
+	<div align="center" class="container">
+			
+	
+	<table class="table" align="center">
+		<th colspan="4">
+			<span style="font-size: 70px;">SIMPLE TIMER<sup>&#8482;</sup></span>
+		<br><br><br>
+		</th>
+		<tr align="center">
+			<td>
+				<span>  HOURS </span><br/>
+				<input type="number" min="0" name="Hour" id="hr" placeholder="Hours" style="border-radius: 3px; margin-right: 0px; width: 90px; height: 40px;">
+			</td>
+			<td>
+				<span>MINUTES</span> <br/>
+				<input type="number" min="0" name="Minutes" id="min" placeholder="Minutes" style="border-radius: 3px; margin-right: 0px; width: 90px; height: 40px;">
+			</td>
+			<td>
+				<span> SECONDS </span><br/>
+				<input type="number" min="0" name="Seconds" id="secs" placeholder="Seconds" style="border-radius: 3px; width: 90px; height: 40px;">
+			</td>
+		</tr>
+		<tr align="center">
+
+			<td align="center" colspan="4">
+				<br><br>
+
+				<button align="center" onclick="countDownTime()" id="button" style="height: 100px; width: 100px; border-radius: 90px; font-size: 25px;">START</button>
+			</td>
+			
+		</tr>
+	</table>
+	<p> &#169; <a href="" style="text-decoration: none; color: white;"> Adegboyega Blessing 2018</a></p>
+	</div>
+</body>
+</html>
